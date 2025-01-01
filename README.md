@@ -51,7 +51,15 @@ This repository contains Python scripts for preprocessing and analyzing EEG data
 
 ## Repository Structure
 
-scripts/ - Contains Python scripts for each preprocessing and analysis step. 1_filtering.py - Performs filtering and signal enhancement. 2_resampling_epoching.py - Resamples data and segments it into epochs. 3_ICA.py - Runs Independent Component Analysis (ICA). 4_ICA_plots.py - Visualizes ICA components and artifact rejection. 5_evoked_plots.py - Generates evoked response plots. 6_averages.py - Computes condition-specific averages. 7_averages_parts.py - Analyzes data across experimental parts. 8_TFRs.py - Performs time-frequency analysis.
+scripts/ - Contains Python scripts for each preprocessing and analysis step. 
+1_filtering.py - Performs filtering and signal enhancement. 
+2_resampling_epoching.py - Resamples data and segments it into epochs. 
+3_ICA.py - Runs Independent Component Analysis (ICA). 
+4_ICA_plots.py - Visualizes ICA components and artifact rejection. 
+5_evoked_plots.py - Generates evoked response plots. 
+6_averages.py - Computes condition-specific averages. 
+7_averages_parts.py - Analyzes data across experimental parts. 
+8_TFRs.py - Performs time-frequency analysis.
 
 
 ---
