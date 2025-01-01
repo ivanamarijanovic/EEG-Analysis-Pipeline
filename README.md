@@ -51,16 +51,39 @@ This repository contains Python scripts for preprocessing and analyzing EEG data
 
 ## Repository Structure
 
-scripts/ - Contains Python scripts for each preprocessing and analysis step. 
-1_filtering.py - Performs filtering and signal enhancement. 
-2_resampling_epoching.py - Resamples data and segments it into epochs. 
-3_ICA.py - Runs Independent Component Analysis (ICA). 
-4_ICA_plots.py - Visualizes ICA components and artifact rejection. 
-5_evoked_plots.py - Generates evoked response plots. 
-6_averages.py - Computes condition-specific averages. 
-7_averages_parts.py - Analyzes data across experimental parts. 
-8_TFRs.py - Performs time-frequency analysis.
+**scripts/** - Contains Python scripts for each preprocessing and analysis step:
+- `1_filtering.py` - Performs filtering and signal enhancement. 
+- `2_resampling_epoching.py` - Resamples data and segments it into epochs. 
+- `3_ICA.py` - Runs Independent Component Analysis (ICA). 
+- `4_ICA_plots.py` - Visualizes ICA components and artifact rejection. 
+- `5_evoked_plots.py` - Generates evoked response plots. 
+- `6_averages.py` - Computes condition-specific averages. 
+- `7_averages_parts.py` - Analyzes data across experimental parts. 
+- `8_TFRs.py` - Performs time-frequency analysis.
 
+---
+
+## Results
+
+### ERP for Cz Electrode
+This plot shows the Event-Related Potential (ERP) at the Cz electrode for various temperature conditions. The vertical line represents the stimulus onset at time 0.
+
+![ERP for Cz Electrode](images/ERP.png)
+
+### ERP for a Single Subject
+This grid of plots represents the ERP for a single subject across different conditions (0°C, 10°C, 18°C, and 22°C) at the Cz electrode. Each plot visualizes the response for a specific condition.
+
+![ERP for Single Subject](images/ERP_subject.png)
+
+### Averaged ERP Across Conditions
+This plot shows the averaged ERP for specific conditions and segments of the data. Each line represents different parts or segments of the experiment.
+
+![Averaged ERP](images/Habituation.png)
+
+### Time-Frequency Representation (TFR)
+The TFR plot visualizes power changes in the frequency domain over time at the Cz electrode. Warmer colors indicate higher power, and cooler colors indicate lower power.
+
+![Time-Frequency Representation](images/TFR.png)
 
 ---
 
@@ -71,21 +94,8 @@ scripts/ - Contains Python scripts for each preprocessing and analysis step.
    git clone https://github.com/ivanamarijanovic/EEG-Analysis-Pipeline.git
    cd EEG-Analysis-Pipeline
 
-    Install dependencies:
+2. Install dependencies:
 
-    pip install -r requirements.txt
+	pip install -r requirements.txt
 
-    Run the scripts in order, starting from 1_filtering.py. Ensure that data paths and subject IDs are correctly configured.
-
-Results
-
-    Preprocessed Data:
-        High-quality EEG signals with artifacts removed.
-        Segmented and baseline-corrected epochs.
-
-    Evoked Responses:
-        Clear ERPs for each experimental condition (0°C, 10°C, 18°C, 22°C).
-        Condition-specific and group-level averages.
-
-    Time-Frequency Representations (TFRs):
-        TFR plots highlighting power changes across conditions.
+3. Run the scripts in order, starting from 1_filtering.py. Ensure that data paths and subject IDs are correctly configured.
