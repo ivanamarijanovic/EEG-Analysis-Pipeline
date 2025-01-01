@@ -65,23 +65,27 @@ This repository contains Python scripts for preprocessing and analyzing EEG data
 
 ## Results
 
-### ERP for Cz Electrode
-This plot shows the Event-Related Potential (ERP) at the Cz electrode for various temperature conditions. The vertical line represents the stimulus onset at time 0.
+## Visualizations of Analysis
+
+Below are example visualizations generated from the EEG analysis pipeline. Note that while the signals have undergone rigorous preprocessing and cleaning, including artifact rejection and independent component analysis, some artifacts and irregularities remain due to issues likely stemming from data acquisition equipment, particularly in shielding.
+
+### Group-Level ERP Averages for Cz electrode
+This plot shows the averaged Event-Related Potentials (ERPs) for all experimental conditions (0°C, 10°C, 18°C, 22°C) at electrode Cz across all subjects. The time range is from -0.5 to 1 second relative to the event onset (time = 0). Peaks in the waveforms correspond to neural responses to the stimulus. The variability in signal amplitudes reflects differences between experimental conditions. Despite preprocessing, some noise persists, likely related to data acquisition.
 
 ![ERP for Cz Electrode](images/ERP.png)
 
-### ERP for a Single Subject
-This grid of plots represents the ERP for a single subject across different conditions (0°C, 10°C, 18°C, and 22°C) at the Cz electrode. Each plot visualizes the response for a specific condition.
+### Single-Subject ERP Comparison
+This figure presents single-subject ERP waveforms at electrode Cz for all four temperature conditions. Each subplot corresponds to a specific condition. While individual patterns are visible, the overall signal is noisier compared to group averages, highlighting the impact of inter-subject variability and inherent challenges in single-subject analyses.
 
 ![ERP for Single Subject](images/ERP_subject.png)
 
-### Averaged ERP Across Conditions
-This plot shows the averaged ERP for specific conditions and segments of the data. Each line represents different parts or segments of the experiment.
+### Condition-Specific Averaging Across Parts
+This plot visualizes the averaged ERP waveforms for the 0°C condition at electrode Cz, broken down into separate parts of the experimental session (e.g., Part 1, Part 1-2). The aggregated average (All Parts) is also shown for comparison. This highlights potential habituation effects or temporal variability across the experimental session.
 
 ![Averaged ERP](images/Habituation.png)
 
 ### Time-Frequency Representation (TFR)
-The TFR plot visualizes power changes in the frequency domain over time at the Cz electrode. Warmer colors indicate higher power, and cooler colors indicate lower power.
+The time-frequency representation (TFR) provides a power spectral analysis of the EEG signal at electrode Cz. It shows changes in power across frequencies (0-100 Hz) over time, relative to the event onset. Red and blue regions indicate increases and decreases in power, respectively. This visualization helps to identify event-related power changes in specific frequency bands, such as theta or alpha rhythms.
 
 ![Time-Frequency Representation](images/TFR.png)
 
@@ -95,7 +99,7 @@ The TFR plot visualizes power changes in the frequency domain over time at the C
    cd EEG-Analysis-Pipeline
 
 2. Install dependencies:
-
+   ```bash
 	pip install -r requirements.txt
 
 3. Run the scripts in order, starting from 1_filtering.py. Ensure that data paths and subject IDs are correctly configured.
